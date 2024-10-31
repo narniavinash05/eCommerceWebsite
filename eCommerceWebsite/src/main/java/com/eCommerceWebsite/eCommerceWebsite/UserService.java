@@ -18,6 +18,11 @@ public class UserService {
     public String getUserByNameStartsWithB(Long id) {
         return userRepository.findUserStartsWithB(id);
     }
+
+    public void createUser(String name) { // Simulating user creation logic
+        System.out.println("Creating user: " + name);
+    }
+
 }
 
 //hit controller--> hit button--. backend endpoint is controller, send endpoint and data to the endpoint

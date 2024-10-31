@@ -5,12 +5,22 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/users")
 public class UserController {
-    private final UserService userService;
-
     @Autowired
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
+    private UserService userService;
+//
+//    @Autowired
+//    public UserController(UserService userService) {
+//        this.userService = userService;
+//    }
+//
+//    @Autowired
+//    public void SetUserService(UserService userService) {
+//        this.userService = userService;
+//    }
+//
+//    public UserService getUserService() {
+//        return userService;
+//    }
 
     @GetMapping("/{id}")
     public String getUserById(@PathVariable Long id) {
