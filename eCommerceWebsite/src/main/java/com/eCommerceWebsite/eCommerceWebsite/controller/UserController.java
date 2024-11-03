@@ -1,4 +1,5 @@
-package com.eCommerceWebsite.eCommerceWebsite;
+package com.eCommerceWebsite.eCommerceWebsite.controller;
+import com.eCommerceWebsite.eCommerceWebsite.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,4 +32,13 @@ public class UserController {
     public String findUserStartsWithB(@PathVariable Long id) {
         return userService.getUserByNameStartsWithB(id);
     }
+//
+//    @PostMapping("/users")
+//    public User createUser(@RequestBody User user) {
+//        return userService.saveUser(user);
+//    }
+//    @PutMapping("/users/{id}")
+//    public User updateUser(@PathVariable Long id, @RequestBody User user) {
+//        return userService.updateUser(id, user);
+//    }
 }

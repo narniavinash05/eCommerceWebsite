@@ -1,4 +1,5 @@
-package com.eCommerceWebsite.eCommerceWebsite;
+package com.eCommerceWebsite.eCommerceWebsite.service;
+import com.eCommerceWebsite.eCommerceWebsite.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,4 +36,4 @@ public class UserService {
 
 //service layer--> get data from repository, id=3, check if user name starts with B, make it as Upper case and return
 //if it doesn't start with B, return user not found
-//metthod-->getcustomusers.(implement using streams)
+//method-->getcustomusers.(implement using streams)
