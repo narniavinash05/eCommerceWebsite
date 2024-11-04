@@ -1,1 +1,14 @@
-spring.profiles.active=dev
+#spring:
+#  application:
+#    name : Product
+#  datasource:
+#    password: Vamsi@0501
+#    url: jdbc:mysql://localhost:3306/e_commerce_website
+#    username: root
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5Dialect
+#        format_sql: true

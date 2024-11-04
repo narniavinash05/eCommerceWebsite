@@ -15,34 +15,34 @@ public class UniversityController {
     public UniversityController(UniversityService universityService) {
         this.universityService = universityService;
     }
-
-    @GetMapping
-    public List<University> getAllUniversities() {
-        return universityService.getAllUniversities();
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<University> getUniversityById(@PathVariable Long id) {
-        return universityService.getUniversityById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
-    }
-
-    @PostMapping
-    public ResponseEntity<University> createUniversity(@RequestBody University university) {
-        University createdUniversity = universityService.addUniversity(university);
-        return new ResponseEntity<>(createdUniversity, HttpStatus.CREATED);
-    }
-
-    @PutMapping("/{id}")
-    public ResponseEntity<University> updateUniversity(@PathVariable Long id, @RequestBody University updatedUniversity) {
-        University university = universityService.updateUniversity(id, updatedUniversity);
-        return university != null ? ResponseEntity.ok(university) : ResponseEntity.notFound().build();
-    }
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteUniversity(@PathVariable Long id) {
-        boolean deleted = universityService.deleteUniversity(id);
-        return deleted ? ResponseEntity.noContent().build() : ResponseEntity.notFound().build();
-    }
+//
+//    @GetMapping
+//    public List<University> getAllUniversities() {
+//        return universityService.getAllUniversities();
+//    }
+//
+//    @GetMapping("/{id}")
+//    public ResponseEntity<University> getUniversityById(@PathVariable Long id) {
+//        return universityService.getUniversityById(id)
+//                .map(ResponseEntity::ok)
+//                .orElse(ResponseEntity.notFound().build());
+//    }
+//
+//    @PostMapping
+//    public ResponseEntity<University> createUniversity(@RequestBody University university) {
+//        University createdUniversity = universityService.addUniversity(university);
+//        return new ResponseEntity<>(createdUniversity, HttpStatus.CREATED);
+//    }
+//
+//    @PutMapping("/{id}")
+//    public ResponseEntity<University> updateUniversity(@PathVariable Long id, @RequestBody University updatedUniversity) {
+//        University university = universityService.updateUniversity(id, updatedUniversity);
+//        return university != null ? ResponseEntity.ok(university) : ResponseEntity.notFound().build();
+//    }
+//
+//    @DeleteMapping("/{id}")
+//    public ResponseEntity<Void> deleteUniversity(@PathVariable Long id) {
+//        boolean deleted = universityService.deleteUniversity(id);
+//        return deleted ? ResponseEntity.noContent().build() : ResponseEntity.notFound().build();
+//    }
 }

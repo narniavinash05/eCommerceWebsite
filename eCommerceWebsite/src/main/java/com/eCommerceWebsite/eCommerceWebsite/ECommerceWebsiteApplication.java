@@ -13,11 +13,11 @@ public class ECommerceWebsiteApplication {
 		SpringApplication.run(ECommerceWebsiteApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner commandLineRunner(UserService userService) {
-		return args -> {
-			userService.createUser("John Doe");
-			userService.getUserById(1L);
-		};
-	}
+//	@Bean
+//	public CommandLineRunner commandLineRunner(UserService userService) {
+//		return args -> {
+//			userService.createUser("John Doe");
+//			userService.getUserById(1L);
+//		};
+//	}
 }

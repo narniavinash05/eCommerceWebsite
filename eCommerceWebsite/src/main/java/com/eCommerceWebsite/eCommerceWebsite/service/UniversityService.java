@@ -17,4 +17,6 @@ public class UniversityService {
     Professor professor2 = new Professor(2L, "Dr. Jane Smith", department,  office, courses);
     Course course1 = new Course(1L, "Algorithms", Professors );
     Course course2 = new Course(2L, "Data Structures", Professors);
+    //professor2.get
+    //office.get
 }
